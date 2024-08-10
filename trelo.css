@@ -378,11 +378,15 @@ body {
 }
 
 
+/* section Kaban */
 
 .kanban-board {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+}
+#kanban h2{
+  color: white;
 }
 
 .kanban-column {
@@ -408,16 +412,42 @@ body {
   margin: 10px 0;
   padding: 10px;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
 }
 
 .kanban-item-tache {
   margin-top: 10px;
 }
 
-button {
+.kanban-item-tache button{
+  font-size: 9px;
+}
+
+#kaban button {
   display: block;
   margin-top: 5px;
+  font-size: 14px;
 }
+
+#kaban button :hover{
+  color: white;
+  background-color: #030246;
+}
+
+/* aection calendar  */
+
+
+.section8{
+  background-color: white;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+#calendar h1{
+
+  color: #030246;
+}
+
 
 #calendar-container {
     height: 500px;
@@ -425,29 +455,77 @@ button {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
+
+  /* section9message */
   
-  #chat {
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #messages {
-    height: 200px;
-    overflow-y: scroll;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
-  
-  #messageInput {
-    width: 80%;
-    padding: 10px;
-  }
-  
-  #sendMessage {
-    padding: 10px 20px;
-  }
+ /* Styles généraux */
+ .section9 {
+  font-family: 'Montserrat', sans-serif;
+  background-color:#030246;
+  width: 100%;
+  margin-top: 30px;
+}
+
+ #communication {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #030246;
+}
+
+#chat {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Messages */
+.message {
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.message.vous {
+  background-color: #e8f0fe;
+  text-align: right;
+}
+
+.message.autre {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.message strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #888;
+}
+
+/* Boutons */
+#communication button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0edfbc;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Input */
+#messageInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
   
   footer {
     background: #333;

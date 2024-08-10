@@ -230,15 +230,16 @@
 
   <main>
     <!-- Section Kanban -->
-    <<section id="kanban">
+    <section id="kanban">
       <h2>Tableau Kanban</h2>
       <div class="kanban-board" id="kanbanboard1">
         <div class="kanban-column" id="todo">
           <h3>À Faire</h3>
           <div class="kanban-item">
             <input type="text" value="" placeholder="Tâche 1">
-            <button class="validate-task">Valider la tâche</button>
+           
             <div class="kanban-item-tache">
+              <button class="validate-task">Valider la tâche</button>
               <button class="edit-task">Modifier la tache</button>
               <button class="move-task">Deplacer la tache</button>
               <button class="add-task">Ajouter une tache</button>
@@ -251,6 +252,7 @@
         <div class="kanban-column" id="done">
           <h3>Terminé</h3>
         </div>
+        
       </div>
       <button id="save-board">Enregistrer le tableau</button>
       <button id="create-new-board">Créer un autre tableau</button>
@@ -263,9 +265,9 @@
   const saveTaskToLocalStorage = (taskElement) => {
     const taskInput = taskElement.querySelector('input').value;
     const columnId = taskElement.closest('.kanban-column').id;
-    const kanbanboard1 = taskElement.closest('.kanban-board').id;
+    const bordId = taskElement.closest('.kanban-board').id;
 
-    let savedTasks = JSON.parse(localStorage.getItem(kanbanboard1)) || {};
+    let savedTasks = JSON.parse(localStorage.getItem(bordId)) || {};
     savedTasks[columnId] = savedTasks[columnId] || [];
     savedTasks[columnId].push(taskInput);
 
@@ -347,8 +349,8 @@ const addTask = (columnId) => {
   newItem.className = 'kanban-item';
   newItem.innerHTML = `
     <input type="text" value="" placeholder="Nouvelle tâche">
-    <button class="validate-task">Valider la tâche</button>
     <div class="kanban-item-tache">
+      <button class="validate-task">Valider la tâche</button>
       <button class="edit-task">Modifier la tache</button>
       <button class="move-task">Deplacer la tache</button>
       <button class="add-task">Ajouter une tache</button>
@@ -372,11 +374,13 @@ const moveTask = (taskElement) => {
   const nextColumn = document.getElementById(nextColumnId);
   nextColumn.appendChild(taskElement);
 };
-</script>
+  </script>
     
 
     <!-- Section Calendrier -->
-    <!-- <section id="calendar">
+
+<section class="section8">
+<div id="calendar">
      <full-calendar shadow options='{
   "headerToolbar": {
     "left": "prev,next today",
@@ -386,17 +390,125 @@ const moveTask = (taskElement) => {
   "initialView": "dayGridMonth",
   "events": []
 }'></full-calendar>
-    </section> -->
+</div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fullCalendarElement = document.querySelector('full-calendar');
 
-    <!-- Section Communication -->
-    <!-- <section id="communication">
-      <h2>Communication</h2>
-      <div id="chat">
-        <div id="messages"></div>
-        <input type="text" id="messageInput" placeholder="Tapez votre message...">
-        <button id="sendMessage">Envoyer</button>
-      </div>
-    </section> -->
+    // Définir les événements dynamiques
+    fullCalendarElement.options = {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,dayGridWeek,dayGridDay'
+      },
+      initialView: 'dayGridMonth',
+      events: [
+        {
+          title: 'Réunion d\'équipe',
+          start: '2024-08-05T10:00:00',
+          end: '2024-08-07T11:00:00'
+        },
+        {
+          title: 'Présentation du projet',
+          start: '2024-08-10',
+        },
+        {
+          title: 'Rencontre avec le Delegue',
+          start: '2024-08-15T14:00:00',
+          end: '2024-08-15T16:00:00'
+        }
+      ]
+    };
+  });
+</script>
+
+    <!-- <Section Communication> -->
+    <section class="section9">
+        <div id="communication">
+          <h2>Communication</h2>
+          <div id="chat">
+            <div id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Tapez votre message...">
+            <button id="sendMessage">Envoyer</button>
+          </div>
+        </div>
+    </section>
+    <script>
+    const messageInput = document.getElementById('messageInput');
+const sendMessageButton = document.getElementById('sendMessage');
+const messagesContainer = document.getElementById('messages');
+
+// Tableau pour associer les noms d'utilisateur aux couleurs
+const userColors = {};
+
+// Fonction pour générer une couleur aléatoire
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Fonction pour supprimer un message
+function deleteMessage(messageElement) {
+  messagesContainer.removeChild(messageElement);
+}
+
+// Fonction pour modifier un message (à implémenter)
+function editMessage(messageElement) {
+  // ... code pour modifier le message
+}
+
+// Récupérer le nom d'utilisateur stocké ou en demander un
+let username = localStorage.getItem('username');
+if (!username) {
+  username = prompt("Veuillez entrer votre nom d'utilisateur : ");
+  localStorage.setItem('username', username);
+}
+
+// Assigner une couleur à l'utilisateur
+let userColor = userColors[username];
+if (!userColor) {
+  userColor = getRandomColor();
+  userColors[username] = userColor;
+}
+
+sendMessageButton.addEventListener('click', () => {
+  const message = messageInput.value;
+  if (message.trim() !== '') {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message');
+    messageElement.style.backgroundColor = userColor;
+
+    const timestamp = new Date().toLocaleTimeString();
+    messageElement.innerHTML = `<strong>${username}:</strong> ${message} <span class="timestamp">(${timestamp})</span>`;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Supprimer';
+    deleteButton.addEventListener('click', () => {
+      deleteMessage(messageElement);
+    });
+
+    const editButton = document.createElement('button');
+    editButton.textContent = 'Modifier';
+    editButton.addEventListener('click', () => {
+      editMessage(messageElement);
+    });
+
+    messageElement.appendChild(deleteButton);
+    messageElement.appendChild(editButton);
+
+    messagesContainer.appendChild(messageElement);
+    messageInput.value = '';
+    scrollToBottom();
+  }
+});
+
+    </script>
 
     <!-- Section Documentation -->
     <!-- <section id="docs">
