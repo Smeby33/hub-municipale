@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.15/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/web-component@6.1.15/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.15/index.global.min.js'></script>
+<link rel="stylesheet" href="trelo.css">
+<link rel="stylesheet" href="trelo.js">
+
+</head>
+<body>
+<!-- section nav -->
+
+
+<nav id="nav">
+    <div class="logo"></div>
+    <div class="navtext">
+        <div class="navtext0">
+            <p>Acceuil</p>
+        </div>
+        <div class="navtext1">
+            <p>Participants</p>
+        </div>
+        <div class="navtext2">
+            <p>Objectifs</p>
+        </div>
+        <div class="navtext3">
+            <p>Progressions</p>
+        </div>
+    </div>
+</nav>
+
+
+<!-- section1 acceuil -->
+
+<section class="section1acceuil">
+    <div class="section1acceuil-image">
+        <div class="section1acceuil-text">
+            <h1>
+                AgileHub - Votre Plateforme de Collaboration
+            </h1>
+            <h6>
+                Accélérez votre productivité grâce à une gestion de projet fluide et collaborative.
+            </h6>
+            <p>
+                Bienvenue sur notre plateforme de gestion de projet agile, conçue pour faciliter la collaboration, la planification et la communication au sein de votre équipe.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- section2 acceuil -->
+
+<section class="section2acceuil">
+    <div class="section2acceuil-presentation">
+        <div class="section2acceuil-presentation-img"></div>
+        <div class="section2acceuil-presentation-texte">
+            <h1>
+                HubOGOOUELABS à la mairie du 2eme Arrondissement
+            </h1>
+            <p>
+                L'objectif de ce hub numérique à la mairie du 2ème arrondissement de Port-Gentil est d'augmenter la productivité des services, et d'améliorer la visibilité et l'échange de la mairie avec les habitants de la localité. Il permettra aussi de donner une aide aux commercant locaux a fin de dynamiser leur dite commerce.          
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<!-- section3 objectifs-->
+
+<section class="section3objectifs">
+    <h1 style="color: #030246;" >AOUT et ses objectifs </h1>
+    <div class="section3objectif-mois">
+        
+        <div class="section3objectif-statusmois">
+            <h3>objectif du mois:</h3>
+            <ul>
+                <li> <input type="checkbox" name="" id="Objectif1mois">Ameliorer la communication interne de la mairie</li>
+                <li>  <input type="checkbox" name="" id="Objectif2mois">Resoudre les inéficacités et satisfaire les besoins</li>
+            </ul>
+        </div>
+        <div class="section3objectif-statussemaine">
+            <h3>objectif du 5 au 9 AOUT:</h3>
+            <ul>
+                <li> <input type="checkbox" name="" id="Objectif1mois">Audit interne </li>
+                <li>  <input type="checkbox" name="" id="Objectif2mois">Emettre des solutions</li>
+            </ul>
+        </div>
+        <div class="section3objectif-statussemaine">
+            <h3>objectif du 12 au 16 AOUT:</h3>
+            <ul>
+                <li> <input type="checkbox" name="" id="Objectif1mois">Non definis</li>
+                <li>  <input type="checkbox" name="" id="Objectif2mois">Non definis</li>
+            </ul>
+        </div>
+        <div class="section3objectif-statussemaine">
+            <h3>objectif du 19 au 23 AOUT:</h3>
+            <ul>
+                <li> <input type="checkbox" name="" id="Objectif1mois">Non definis</li>
+                <li>  <input type="checkbox" name="" id="Objectif2mois">Non definis</li>
+            </ul>
+        </div>
+        <div class="section3objectif-statussemaine">
+            <h3>objectif du 26 au 30 AOUT:</h3>
+            <ul>
+                <li> <input type="checkbox" name="" id="Objectif1mois">Non definis</li>
+                <li>  <input type="checkbox" name="" id="Objectif2mois">Non definis</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- section4participants -->
+
+<section class="section4participant">
+  <div class="section4participant-semaine">
+    <h1>semaine du 05 au 09 Aout</h1>
+  
+    <div class="section4participant-personnes">
+      <div class="section4-personnes-hubmanager" id="hubmanager">
+        <div class="section4-personnes-text">
+          <h3>
+            Hub manager
+          </h3>
+        </div>
+      </div>
+      <div class="section4-personnes-apprenants" id="apprenants1" >
+        <div class="section4-personnes-text">
+          <h3>
+            Hub apprenant
+          </h3>
+        </div>
+      </div>
+      <div class="section4-personnes-apprenants" id="apprenants2" >
+        <div class="section4-personnes-text">
+          <h3>
+            Hub apprenant
+          </h3>
+        </div>
+      </div>
+      <div class="section4-personnes-apprenants" id="apprenants3" >
+        <div class="section4-personnes-text">
+          <h3>
+            Hub apprenant
+          </h3>
+        </div>
+      </div>
+      <div class="section4-personnes-apprenants" id="apprenants4" >
+        <div class="section4-personnes-text">
+          <h3>
+            Hub apprenant
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section5 -->
+
+<section class="section5">
+
+    <div class="objectifjournalier">
+      <section class="section5objectifs">
+        <h1 style="color: #030246;font-weight: bolder;font-size: 24px;">Objectifs journalier  </h1>
+        <div class="section5objectif-mois">
+            
+            <div class="section5objectif-statussemaine">
+              <h3>Lundi</h3>
+              <ul>
+                  <li> <input type="checkbox" name="" id="Objectif1mois">organisation du hub</li>
+                  <li>  <input type="checkbox" name="" id="Objectif2mois">Les questionnaires pour les audit</li>
+                  <li>  <input type="checkbox" name="" id="Objectif2mois">Installation du matériel</li>
+                  <li>  <input type="checkbox" name="" id="Objectif2mois">Création des badges</li>
+                  <li>  <input type="checkbox" name="" id="Objectif2mois">Brainstormer</li>
+
+              </ul>
+            </div>
+            <div class="section5objectif-statussemaine">
+                <h3>Mardi</h3>
+                <ul>
+                    <li> <input type="checkbox" name="" id="Objectif1mois">rencontrer le DS</li>
+                    <li>  <input type="checkbox" name="" id="Objectif2mois">Distribuer les questionnaires</li>
+                    <li>  <input type="checkbox" name="" id="Objectif2mois">Analyse des données</li>
+                    <li>  <input type="checkbox" name="" id="Objectif2mois">Etablissement des Badges</li>
+                </ul>
+            </div>
+            <div class="section5objectif-statussemaine">
+                <h3>Mercredi</h3>
+                <ul>
+                    <li> <input type="checkbox" name="" id="Objectif1mois">proposer les solutions</li>
+                    <li>  <input type="checkbox" name="" id="Objectif2mois">Structurer les idées</li>
+                </ul>
+            </div>
+            <div class="section5objectif-statussemaine">
+                <h3>Jeudi</h3>
+                <ul>
+                    <li> <input type="checkbox" name="" id="Objectif1mois">Implémenter les idées</li>
+                    <li>  <input type="checkbox" name="" id="Objectif2mois">restitution du formulaire à 12H</li>
+                </ul>
+            </div>
+            <div class="section5objectif-statussemaine">
+                <h3>Vendredi</h3>
+                <ul>
+                    <li> <input type="checkbox" name="" id="Objectif1mois">Resultat de l’analyse </li>
+                    <li>  <input type="checkbox" name="" id="Objectif2mois">Récapitulatif de la semaine</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+</section>
+
+<!-- section6 -->
+
+<section class="section6-headera">
+  <h1>Tableau de Bord de l'Équipe</h1>
+  <div class="navdiv">
+    <ul>
+      <li><a href="#kanban">Kanban</a></li>
+      <li><a href="#calendar">Calendrier</a></li>
+      <li><a href="#communication">Communication</a></li>
+      <li><a href="#docs">Documentation</a></li>
+    </ul>
+  </div>
+  </div>
+</section>
+
+
+  <main>
+    <!-- Section Kanban -->
+    <<section id="kanban">
+      <h2>Tableau Kanban</h2>
+      <div class="kanban-board" id="kanbanboard1">
+        <div class="kanban-column" id="todo">
+          <h3>À Faire</h3>
+          <div class="kanban-item">
+            <input type="text" value="" placeholder="Tâche 1">
+            <button class="validate-task">Valider la tâche</button>
+            <div class="kanban-item-tache">
+              <button class="edit-task">Modifier la tache</button>
+              <button class="move-task">Deplacer la tache</button>
+              <button class="add-task">Ajouter une tache</button>
+            </div>
+          </div>
+        </div>
+        <div class="kanban-column" id="in-progress">
+          <h3>En Cours</h3>
+        </div>
+        <div class="kanban-column" id="done">
+          <h3>Terminé</h3>
+        </div>
+      </div>
+      <button id="save-board">Enregistrer le tableau</button>
+      <button id="create-new-board">Créer un autre tableau</button>
+    </section>
+    
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  let boardCounter = 1;
+
+  const saveTaskToLocalStorage = (taskElement) => {
+    const taskInput = taskElement.querySelector('input').value;
+    const columnId = taskElement.closest('.kanban-column').id;
+    const kanbanboard1 = taskElement.closest('.kanban-board').id;
+
+    let savedTasks = JSON.parse(localStorage.getItem(kanbanboard1)) || {};
+    savedTasks[columnId] = savedTasks[columnId] || [];
+    savedTasks[columnId].push(taskInput);
+
+    localStorage.setItem(boardId, JSON.stringify(savedTasks));
+  };
+
+  const saveBoardToLocalStorage = (boardId) => {
+    const board = document.getElementById(boardId);
+    const columns = board.querySelectorAll('.kanban-column');
+
+    let savedBoard = {};
+
+    columns.forEach(column => {
+      const columnId = column.id;
+      savedBoard[columnId] = [];
+
+      const tasks = column.querySelectorAll('.kanban-item input');
+      tasks.forEach(task => {
+        savedBoard[columnId].push(task.value);
+      });
+    });
+
+    localStorage.setItem(boardId, JSON.stringify(savedBoard));
+  };
+
+  const createNewBoard = () => {
+    boardCounter += 1;
+    const newBoard = document.createElement('div');
+    newBoard.className = 'kanban-board';
+    newBoard.id = `kanban-board-${boardCounter}`;
+
+    newBoard.innerHTML = `
+      <div class="kanban-column" id="todo">
+        <h3>À Faire</h3>
+      </div>
+      <div class="kanban-column" id="in-progress">
+        <h3>En Cours</h3>
+      </div>
+      <div class="kanban-column" id="done">
+        <h3>Terminé</h3>
+      </div>
+    `;
+
+    document.getElementById('kanban').insertBefore(newBoard, document.getElementById('save-board'));
+  };
+
+  document.querySelectorAll('.kanban-board').forEach(board => {
+    board.addEventListener('click', (event) => {
+      const target = event.target;
+
+      if (target.classList.contains('validate-task')) {
+        const taskElement = target.closest('.kanban-item');
+        saveTaskToLocalStorage(taskElement);
+      } else if (target.classList.contains('add-task')) {
+        const columnId = board.querySelector('.kanban-column').id;
+        addTask(columnId);
+      } else if (target.classList.contains('move-task')) {
+        const taskElement = target.closest('.kanban-item');
+        moveTask(taskElement);
+      } else if (target.classList.contains('edit-task')) {
+        const taskElement = target.closest('.kanban-item');
+        const input = taskElement.querySelector('input');
+        input.focus();
+      }
+    });
+  });
+
+  document.getElementById('save-board').addEventListener('click', () => {
+    const boardId = `kanban-board-${boardCounter}`;
+    saveBoardToLocalStorage(boardId);
+  });
+
+  document.getElementById('create-new-board').addEventListener('click', createNewBoard);
+});
+
+const addTask = (columnId) => {
+  const column = document.getElementById(columnId);
+  const newItem = document.createElement('div');
+  newItem.className = 'kanban-item';
+  newItem.innerHTML = `
+    <input type="text" value="" placeholder="Nouvelle tâche">
+    <button class="validate-task">Valider la tâche</button>
+    <div class="kanban-item-tache">
+      <button class="edit-task">Modifier la tache</button>
+      <button class="move-task">Deplacer la tache</button>
+      <button class="add-task">Ajouter une tache</button>
+    </div>
+  `;
+  column.appendChild(newItem);
+};
+
+const moveTask = (taskElement) => {
+  const currentColumn = taskElement.closest('.kanban-column');
+  let nextColumnId;
+
+  if (currentColumn.id === 'todo') {
+    nextColumnId = 'in-progress';
+  } else if (currentColumn.id === 'in-progress') {
+    nextColumnId = 'done';
+  } else {
+    nextColumnId = 'todo';
+  }
+
+  const nextColumn = document.getElementById(nextColumnId);
+  nextColumn.appendChild(taskElement);
+};
+</script>
+    
+
+    <!-- Section Calendrier -->
+    <!-- <section id="calendar">
+     <full-calendar shadow options='{
+  "headerToolbar": {
+    "left": "prev,next today",
+    "center": "title",
+    "right": "dayGridMonth,dayGridWeek,dayGridDay"
+  },
+  "initialView": "dayGridMonth",
+  "events": []
+}'></full-calendar>
+    </section> -->
+
+    <!-- Section Communication -->
+    <!-- <section id="communication">
+      <h2>Communication</h2>
+      <div id="chat">
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Tapez votre message...">
+        <button id="sendMessage">Envoyer</button>
+      </div>
+    </section> -->
+
+    <!-- Section Documentation -->
+    <!-- <section id="docs">
+      <h2>Documentation</h2>
+      <div id="docs-container">
+        <p>Accédez aux documents importants <a href="#">ici</a>.</p>
+      </div>
+    </section>
+  </main> -->
+
+  <footer>
+    <p>© 2024 Équipe de Gestion de Projet</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
