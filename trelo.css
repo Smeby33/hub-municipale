@@ -1,0 +1,459 @@
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.562);
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .navtext {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #030246;
+  }
+  
+  .headera {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .headera h1 {
+    margin: 0;
+  }
+  
+  .navdiv ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navdiv ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .navdiv ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+    margin-bottom:3em;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+
+  /* section1acceuil */
+
+  .section1acceuil-image{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/image1.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    position: relative;
+  }
+  .section1acceuil-text{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.438);
+    color: white;
+    justify-content: center;
+  }
+  .section1acceuil-text h1,  .section1acceuil-text h6 , .section1acceuil-text p {
+    text-align: center;
+  }
+  .section1acceuil-text h6 , .section1acceuil-text p {
+    margin-top: 0px;
+  }
+
+
+/* section2acceuil */
+
+
+
+    .section2acceuil{
+        margin-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 20px;
+    }
+    .section2acceuil-presentation{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .section2acceuil-presentation-img{
+        width: 48%;
+        background-image: url(./images/image2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .section2acceuil-presentation-texte{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+
+    /* section3objectifs */
+
+    .section3objectifs{
+
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        padding-top: 10px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section3objectif-mois{
+
+        width: 95%;
+        background-color:  #030246;
+        padding: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .section3objectif-statusmois{
+
+        width: 18%;
+        height: 280px;
+        border: solid 1px white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+    }
+
+    .section3objectif-statusmois:hover {
+
+        width: 18%;
+        height: 280px;
+        border: solid 1px #030246;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #030246;
+        background-color: white;
+    }
+
+    .section3objectif-statusmois li,.section3objectif-statussemaine li {
+        list-style: none; 
+        text-align: start;
+    }
+    .section3objectif-statusmois h3,.section3objectif-statussemaine h3 {
+        list-style: none; 
+        text-align: start;
+    }
+    .section3objectif-statussemaine li,.section3objectif-statussemaine h3{
+        list-style: none; 
+        text-align: start;
+    }
+    .section3objectif-statussemaine ul {
+        list-style: none; 
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content:start;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    .section3objectif-statussemaine{
+        width: 18%;
+        height: 280px;
+        border: solid 1px white;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        color: white;
+
+    }
+    .section3objectif-statussemaine:hover{
+        width: 18%;
+        height: 280px;
+        border: solid 1px #030246;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        background-color: white;
+        color: #030246;
+
+    }
+
+/* section4participants */
+
+    .section4participant{
+      width: 100%;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section4participant-semaine{
+      width: 90%;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    
+    }
+    .section4participant-personnes{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section4-personnes-hubmanager{
+      width: 18%;
+      height: 100%;
+      background-color: #030246;
+      border: solid 2px white;
+      border-radius:60px;
+      position: relative;
+      background-image: url(./images/image3.PNG);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+    .section4-personnes-text{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.349);
+      align-items: center;
+      border-radius: 0px 0px 70px 70px;
+    }
+
+      #apprenants1,#apprenants2,#apprenants3,#apprenants4 {
+        width: 18%;
+        height: 100%;
+        background-color: #030246;
+        border: solid 2px white;
+        border-radius:60px;
+        position: relative;
+        background-image: url(./images/image3.PNG);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+
+    }
+
+    /* section5objectifjournalier */
+
+    .section5objectifs{
+
+      width: 100%;
+      background-color: white;
+      padding: 20px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .section5objectif-mois{
+
+      width: 95%;
+      background-color:  #030246;
+      padding: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .section5objectif-statusmois{
+
+      width: 18%;
+      height: 280px;
+      border: solid 1px white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+  }
+
+  .section5objectif-statusmois:hover {
+
+      width: 18%;
+      height: 280px;
+      border: solid 1px #030246;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #030246;
+      background-color: white;
+  }
+
+  .section5objectif-statusmois li,.section5objectif-statussemaine li {
+      list-style: none; 
+      text-align: start;
+  }
+  .section5objectif-statusmois h3,.section5objectif-statussemaine h3 {
+      list-style: none; 
+      text-align: start;
+  }
+  .section5objectif-statussemaine li,.section5objectif-statussemaine h3{
+      list-style: none; 
+      text-align: start;
+  }
+  .section5objectif-statussemaine ul {
+      list-style: none; 
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content:start;
+      margin: 0px;
+      padding: 0px;
+  }
+  .section5objectif-statussemaine{
+      width: 18%;
+      height: 280px;
+      border: solid 1px white;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      color: white;
+
+  }
+  .section5objectif-statussemaine:hover{
+      width: 18%;
+      height: 280px;
+      border: solid 1px #030246;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      background-color: white;
+      color: #030246;
+
+  }
+
+
+/* section6 */
+
+.section6-headera h1{
+  color: white;
+}
+
+
+
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.kanban-column {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 30%;
+  position: relative;
+}
+
+.kanban-column h3 {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin: -10px -10px 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.kanban-item {
+  background: #e2e2e2;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.kanban-item-tache {
+  margin-top: 10px;
+}
+
+button {
+  display: block;
+  margin-top: 5px;
+}
+
+#calendar-container {
+    height: 500px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #chat {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #messages {
+    height: 200px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #messageInput {
+    width: 80%;
+    padding: 10px;
+  }
+  
+  #sendMessage {
+    padding: 10px 20px;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+  }
+  
